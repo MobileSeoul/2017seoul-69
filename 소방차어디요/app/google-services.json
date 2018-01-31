@@ -1,0 +1,61 @@
+{
+  "project_info": {
+    "project_number": "768002839720",
+    "project_id": "smart119-a36df"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768002839720:android:f36173e948059ccb",
+        "android_client_info": {
+          "package_name": "gcm.play.android.samples.com.gcmquickstart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAASCSelfMNC0RNArCHntLANTNGF7pM1Oo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768002839720:android:6d893953ccd77e77",
+        "android_client_info": {
+          "package_name": "grocket.com.smart119citizen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAASCSelfMNC0RNArCHntLANTNGF7pM1Oo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

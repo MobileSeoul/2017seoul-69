@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="grocket.com.smart119citizen.JoinActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_alignParentTop="true">
+    </android.support.v7.widget.Toolbar>
+
+    <ImageButton
+        android:id="@+id/btnJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_join_okay"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnJoin">
+
+        <LinearLayout
+            android:id="@+id/layBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/join_txt_title1"
+                android:textColor="@color/white"
+                android:background="@color/default_text_bg_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="ID"/>
+
+            <EditText
+                android:id="@+id/edtID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:hint="@string/join_hint_ID"
+                android:textColorHint="@color/hint_text_color"
+                android:background="@drawable/inputbox_common"
+                android:gravity="start"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:maxLength="255"
+                android:nextFocusDown="@+id/edtPassword"
+                android:selectAllOnFocus="false"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="비밀번호"/>
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:hint="@string/join_hint_Password"
+                android:textColorHint="@color/hint_text_color"
+                android:background="@drawable/inputbox_common"
+                android:gravity="start"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:maxLength="255"
+                android:nextFocusDown="@+id/edtPasswordConfirm"
+                android:selectAllOnFocus="false"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="비밀번호 확인"/>
+
+            <EditText
+                android:id="@+id/edtPasswordConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:hint="@string/join_hint_PasswordConfirm"
+                android:textColorHint="@color/hint_text_color"
+                android:background="@drawable/inputbox_common"
+                android:gravity="start"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:maxLength="255"
+                android:nextFocusDown="@+id/edtUserName"
+                android:selectAllOnFocus="false"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/join_txt_title2"
+                android:textColor="@color/white"
+                android:background="@color/default_text_bg_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="이름"/>
+
+            <EditText
+                android:id="@+id/edtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:hint="@string/join_hint_UserName"
+                android:textColorHint="@color/hint_text_color"
+                android:background="@drawable/inputbox_common"
+                android:gravity="start"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:maxLength="255"
+                android:selectAllOnFocus="false"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="근무 소방서"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/txtSelectedFirestationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:hint="@string/join_hint_Firestation"
+                android:textColorHint="@color/hint_text_color"
+                android:background="@drawable/bt_dropdown"
+                android:gravity="start"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:maxLength="255"
+                android:selectAllOnFocus="false"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

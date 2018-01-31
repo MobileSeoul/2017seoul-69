@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/bg"
+    tools:context="grocket.com.smart119citizen.MobilizeLocActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="left">
+
+            <ImageButton
+                android:id="@+id/btnLive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_mobilize_live"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:id="@+id/btnMic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_mobilize_mic"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/btnLive"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp" />
+
+            <ImageButton
+                android:id="@+id/btnPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_mobilize_pic"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/btnMic"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="horizontal"
+            android:background="#4c7ebd"
+            android:weightSum="9">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ico_wind" />
+
+                <TextView
+                    android:id="@+id/txtDirectionOfWind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:text="남동 4m/s"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ico_temp" />
+
+                <TextView
+                    android:id="@+id/txtTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="29도"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ico_rain" />
+
+                <TextView
+                    android:id="@+id/txtHum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="62.6%"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <RelativeLayout
+            android:id="@+id/layTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="#feff0d"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgGoldentimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ico_goldentimer"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+
+            <TextView
+                android:id="@+id/txtTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/imgGoldentimer"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:text="00:00:00"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/layContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/layTimer"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="#800a88ae">
+                    <TextView
+                        android:id="@+id/txtAccidentContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:background="#800a88ae">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/status_on"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="강북 삼성병원"
+                                android:textColor="@color/white"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:background="#800a88ae">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/status_off"/>
+
+                            <TextView
+                                android:id="@+id/txtNotServiceHopistal1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="을지 백병원"
+                                android:textColor="@color/white"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:background="#800a88ae">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/status_off"/>
+
+                            <TextView
+                                android:id="@+id/txtNotServiceHopistal2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:text="신촌 세브란스병원"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:orientation="horizontal"
+                            android:background="#800a88ae">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/status_on"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="서울대 병원"
+                                android:textColor="@color/white"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

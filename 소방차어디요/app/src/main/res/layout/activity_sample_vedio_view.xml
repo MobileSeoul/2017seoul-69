@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context="grocket.com.smart119citizen.SampleVedioViewActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <VideoView
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/imgIcnLive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="right"
+            android:background="@drawable/live_movie"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layTimer"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#800a88ae">
+
+                <TextView
+                    android:id="@+id/txtAccidentContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="#800a88ae">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/status_on"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="강북 삼성병원"
+                            android:textColor="@color/white"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp" />
+                        <!--android:text="강북 삼성병원"-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="#800a88ae">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/status_off"/>
+
+                        <TextView
+                            android:id="@+id/txtNotServiceHopistal1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="을지 백병원"
+                            android:textColor="@color/white"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp" />
+                        <!--android:text="을지 백병원"-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="#800a88ae">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/status_off"/>
+
+                        <TextView
+                            android:id="@+id/txtNotServiceHopistal2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="신촌 세브란스병원"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp" />
+                        <!--android:text="신촌 세브란스병원"-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:orientation="horizontal"
+                        android:background="#800a88ae">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/status_on"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="서울대 병원"
+                            android:textColor="@color/white"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp" />
+                        <!--android:text="서울대 병원"-->
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

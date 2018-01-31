@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_row"
+    android:clickable="true"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/imgStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/imgStatus"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtAccidentContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_text_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="사고 내용" />
+
+        <TextView
+            android:id="@+id/txtAccidentAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_text_color"
+            android:textSize="16sp"
+            android:text="사고 주소" />
+
+        <TextView
+            android:id="@+id/txtOrderDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/default_text_color"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:text="신고 접수 시간 날짜" />
+
+    </LinearLayout>
+
+</RelativeLayout>

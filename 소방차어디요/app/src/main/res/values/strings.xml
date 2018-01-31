@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">소방차 어디요</string>
+
+    <string name="title_terms">이용약관</string>
+    <string name="title_join">회원가입</string>
+    <string name="title_command_list">스마트 출동지령서</string>
+    <string name="title_location_list">출동 위치 서비스</string>
+    <string name="title_contact_list">긴급전화</string>
+    <string name="title_mysetting">환경설정</string>
+    <string name="title_change_password">비밀번호 변경</string>
+
+    <!-- 공통 -->
+    <string name="dlg_yes">예</string>
+    <string name="dlg_no">아니오</string>
+    <string name="alert_warning">경고</string>
+    <string name="msg_network_not_good">네트워크 연결 상태가 좋지 않습니다.</string>
+
+    <!-- 인트로 페이지 -->
+    <string name="intro_alert_checkversion_title">버전확인</string>
+    <string name="intro_alert_checkversion_message">업데이트를 하시겠습니까?</string>
+
+    <!-- 로그인 페이지 -->
+    <string name="login_txt_join">회원가입이 필요하세요?</string>
+    <string name="login_hint_ID">아이디를 입력하세요</string>
+    <string name="login_hint_Password">비밀번호를 입력하세요.</string>
+    <string name="login_txt_FindPassword">비밀번호를 잃어버리셨습니까?</string>
+    <string name="login_msg_not_approval">아직 승인이 안되어있는 회원입니다. 관리자가 승인할때 까지 기다려주세요.</string>
+
+    <!-- 이용약관 페이지 -->
+    <string name="terms_txt_terms1">서비스 이용약관</string>
+    <string name="terms_txt_terms2">개인정보취급방침</string>
+    <string name="terms_txt_terms3">위치정보 이용약관</string>
+    <string name="terms_msg_youhavetoagree">모든 이용약관에 동의하셔야 합니다.</string>
+
+    <!-- 회원가입 페이지 -->
+    <string name="join_txt_title1">로그인 정보</string>
+    <string name="join_txt_title2">소방공무원 정보</string>
+    <string name="join_hint_ID">아이디</string>
+    <string name="join_hint_Password">비밀번호(영문 소문자 조합 6~12자리 이내)</string>
+    <string name="join_hint_PasswordConfirm">비밀번호 확인</string>
+    <string name="join_hint_UserName">이름</string>
+    <string name="join_hint_Firestation">근무 소방서를 선택하세요.</string>
+    <string name="join_msg_joinokay">회원가입이 완료되었습니다.</string>
+
+    <!-- 메인 -->
+    <string name="main_msg_confirm_exit">"\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다."</string>
+
+    <!-- 연락처 목록 -->
+    <string name="contactlist_edt_name_hint">이름</string>
+    <string name="contactlist_edt_class_hint">직책</string>
+    <string name="contactlist_edt_telephone_hint">전화번호</string>
+
+    <!-- 환경설정 -->
+    <string name="mysetting_edt_hint_class">계급</string>
+
+    <!-- 비밀번호 찾기 페이지 -->
+    <string name="findpassword_txt_title1">비밀번호 찾기</string>
+    <string name="findpassword_msg_passwordischanged">사용자 이메일로 임의로 변경된 비밀번호가 전송되었습니다.</string>
+
+    <!-- 유효성 검사 메시지 -->
+    <string name="invalid_check_msg_empty_id">아이디를 입력하셔야 합니다.</string>
+    <string name="invalid_check_msg_empty_password">비밀번호를 입력하셔야 합니다.</string>
+    <string name="invalid_check_msg_password_length">비밀번호를 6자리 이상 입력하셔야 합니다.</string>
+    <string name="invalid_check_msg_not_match_password">비밀번호가 맞지 않습니다.</string>
+    <string name="invalid_check_msg_empty_name">이름을 입력하셔야 합니다.</string>
+    <string name="invalid_check_msg_empty_firestation">근무 소방서를 선택하셔야 합니다.</string>
+
+</resources>

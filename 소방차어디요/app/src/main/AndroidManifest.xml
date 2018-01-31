@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="grocket.com.smart119citizen">
+
+    <permission
+        android:name="grocket.com.smart119citizen.locationapi.maps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="grocket.com.smart119.locationapi.maps.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- [START gcm_permission] -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- [END gcm_permission] -->
+
+    <permission
+        android:name="grocket.com.smart119citizen.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="grocket.com.gcmtest.permission.C2D_MESSAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="grocket.com.smart119citizen.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="grocket.com.gcmtest.gcm" />
+            </intent-filter>
+        </receiver>
+        <!-- [END gcm_receiver] -->
+
+
+        <!-- [START gcm_listener_service] -->
+        <service
+            android:name="grocket.com.smart119citizen.gcm.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener_service] -->
+
+
+        <!-- [START instanceId_listener_service] -->
+        <service
+            android:name="grocket.com.smart119citizen.gcm.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener_service] -->
+
+
+        <!-- [START gcm_registration_service] -->
+        <service
+            android:name="grocket.com.smart119citizen.gcm.RegistrationIntentService"
+            android:exported="false" />
+        <!-- [END gcm_registration_service] -->
+        <activity android:name="grocket.com.smart119citizen.MainActivity" />
+        <activity
+            android:name="grocket.com.smart119citizen.PopupActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity android:name="grocket.com.smart119citizen.LoginActivity" />
+        <activity android:name="grocket.com.smart119citizen.TermsActivity" />
+        <activity android:name="grocket.com.smart119citizen.JoinActivity" />
+        <activity android:name="grocket.com.smart119citizen.CommandListActivity" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCMpZ6E03yZy79M2L2UBUpnBOnQjR0oU6w" />
+
+        <activity android:name="grocket.com.smart119citizen.MapTestActivity" />
+        <activity android:name="grocket.com.smart119citizen.LocationListActivity" />
+        <activity android:name="grocket.com.smart119citizen.MobilizeLocActivity" />
+        <activity android:name="grocket.com.smart119citizen.ContactListActivity" />
+        <activity android:name="grocket.com.smart119citizen.InsertContactActivity" />
+        <activity android:name="grocket.com.smart119citizen.UpdateContactActivity" />
+        <activity
+            android:name="grocket.com.smart119citizen.ViewCommandPopupActivity"
+            android:theme="@style/Theme.Transparent" />
+        <activity android:name="grocket.com.smart119citizen.MySettingActivity" />
+        <activity android:name="grocket.com.smart119citizen.ChangePasswordActivity" />
+        <activity android:name="grocket.com.smart119citizen.SampleVedioViewActivity"></activity>
+    </application>
+
+</manifest>

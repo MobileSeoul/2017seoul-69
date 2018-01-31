@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="grocket.com.smart119citizen.UpdateContactActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/txt_add_contact" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputbox_common"
+            android:gravity="left"
+            android:hint="@string/contactlist_edt_name_hint"
+            android:inputType="textPersonName"
+            android:maxLength="255"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/edtClass"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_text_color"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edtClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/inputbox_common"
+            android:gravity="left"
+            android:hint="@string/contactlist_edt_class_hint"
+            android:inputType="text"
+            android:maxLength="255"
+            android:maxLines="1"
+            android:nextFocusDown="@+id/edtTelephone"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_text_color"
+            android:textSize="15sp" />
+
+
+        <EditText
+            android:id="@+id/edtTelephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/inputbox_common"
+            android:gravity="left"
+            android:hint="@string/contactlist_edt_telephone_hint"
+            android:inputType="phone"
+            android:maxLength="255"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_text_color"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/btnModifyTelephone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_contact_modifytel" />
+
+</RelativeLayout>

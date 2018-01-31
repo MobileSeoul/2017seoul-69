@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_gravity="center"
+    tools:context="grocket.com.smart119citizen.ViewCommandPopupActivity">
+
+    <RelativeLayout
+        android:id="@+id/layBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/imgAlarmType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ico_pop_emergency"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:id="@+id/layBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+            <ImageButton
+                android:id="@+id/btnCalling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_popup_call_red"
+                android:layout_marginRight="5dp" />
+
+            <ImageButton
+                android:id="@+id/btnLocInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_popup_locinfo"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/imgAlarmType"
+            android:layout_above="@id/layBottom"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center|top">
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/txtAccidentNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/txtMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

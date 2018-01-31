@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "grocket.com.smart119citizen"
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 5
+        versionName "1.12.1"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+
+        // apk파일 이름에 version 정보가 들어가도록 내용 추가
+         setProperty("archivesBaseName", "smart119-citizen-v${versionName}c${versionCode}")
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/BCKEY.DSA'
+        exclude 'META-INF/BCKEY.SF'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'AUTHORS'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.properties'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.xml'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile project(':keipacklib')
+}
+
+apply plugin: 'com.google.gms.google-services'

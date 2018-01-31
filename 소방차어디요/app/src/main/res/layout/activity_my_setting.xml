@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="grocket.com.smart119citizen.MySettingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <ImageButton
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_mysetting_logout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnLogout"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/layBody"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_background"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:text="이름"/>
+
+                <EditText
+                    android:id="@+id/edtUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/inputbox_common"
+                    android:gravity="start"
+                    android:hint="@string/join_hint_UserName"
+                    android:inputType="textPersonName"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:text="근무소방서"/>
+
+                <TextView
+                    android:id="@+id/txtSelectedFirestationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bt_dropdown"
+                    android:gravity="start"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:text="계급"/>
+
+                <EditText
+                    android:id="@+id/edtClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/inputbox_common"
+                    android:gravity="start"
+                    android:hint="@string/mysetting_edt_hint_class"
+                    android:inputType="textPersonName"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_text_color"
+                    android:visibility="gone"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:text="근무팀"/>
+
+                <TextView
+                    android:id="@+id/txtWorkTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bt_dropdown"
+                    android:gravity="start"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:text="출동차량"/>
+
+                <TextView
+                    android:id="@+id/txtVehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bt_dropdown"
+                    android:gravity="start"
+                    android:maxLength="255"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_text_color"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="근무표 연동"
+                    android:textColor="@color/default_text_color"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cbFlexibleWorkplace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/checkbox_default"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="전 차량 출동 알림\n(OFF시 내 출동 차량 출동\n시에만 지령을 푸시합니다.)"
+                    android:textColor="@color/default_text_color"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cbTotalVehiclePush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/checkbox_default"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btnChangePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_change_password"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

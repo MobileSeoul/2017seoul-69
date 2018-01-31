@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0e7994</color>
+    <color name="colorPrimaryDark">#0e7994</color>
+    <color name="colorAccent">#F6F6F6</color>
+
+    <color name="black">#FF000000</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="green">#FF00FF00</color>
+    <color name="gray">#FFAAAAAA</color>
+    <color name="red">#FFFF0000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="toolbar_color">@color/colorPrimary</color>
+    <color name="hint_text_color">@color/white</color>
+
+    <color name="popup_green">#5ae49e</color>
+    <color name="popup_green_dark">#47a374</color>
+    <color name="popup_yellow">#ffc64d</color>
+    <color name="popup_yellow_dark">#ffc64d</color>
+    <color name="popup_red">#ff6147</color>
+    <color name="popup_red_dark">#9e5448</color>
+
+    <color name="default_text_color">@color/white</color>
+    <color name="default_text_bg_color">#26939b</color>
+    <color name="default_explanation_text_color">#848484</color>
+    <color name="default_background">#018790</color>
+    <color name="default_textbox_stroke">#d7d7d7</color>
+    <color name="default_title_color">#0087B4</color>
+
+    <color name="colorPressState">#192530</color>
+    <color name="colorNormalState">#365361</color>
+    <color name="colorNaviBg">#ebf1f1</color>
+    <color name="background_text">#80000000</color>
+</resources>

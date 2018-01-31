@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="grocket.com.smart119citizen.TermsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_alignParentTop="true">
+    </android.support.v7.widget.Toolbar>
+
+    <ImageButton
+        android:id="@+id/btnAllAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_terms_agree"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:id="@+id/layBody"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/btnAllAgree"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:weightSum="6">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTerms01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:text="@string/terms_txt_terms1"
+                    android:textColor="@color/default_text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbTerms01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/checkbox_default"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etTerms01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/inputbox_common"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textMultiLine|none"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/default_text_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTerms02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:text="@string/terms_txt_terms2"
+                    android:textColor="@color/default_text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cbTerms02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/checkbox_default"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/etTerms02"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/inputbox_common"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="textMultiLine|none"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/default_text_color"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
